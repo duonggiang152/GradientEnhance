@@ -7,13 +7,14 @@ int main()
 
 
     cv::Mat test;
-    cv::Mat image = cv::imread("C:\\Users\\giang\\Downloads\\bigFogMap.hdr", cv::IMREAD_UNCHANGED);
+    cv::Mat image = cv::imread(".\\images\\cathedral.hdr", cv::IMREAD_UNCHANGED);
     cv::Mat log;
     cv::log(image, log);
     //cv::flip(image, image, 1);
     cv::Mat result;
-    HDRCompression h(0.05, 0.8, 0.4);
+    HDRCompression h(0.1, 0.8, 0.6);
     result = h.Apply(image, test);
-
+    cv::normalize(result, result, 0, 1, cv::NORM_MINMAX, CV_32FC1);
+    cv::exp(result, result);
     return 0;
 }
