@@ -7,7 +7,9 @@ The main Ideal of this enhancement is enhance in gradient space
 
 By analysis gradient space, we know that which regions are low contrast, and by emphasize the magnitude of the gradient, we enhance contrast of this regions
 
-After That Form poisson euqation and solve this by Intel MKL library
+After That:
+Form poisson equation and solve that to have new Image
+
 
 # original Image <After stretch 0-255 to display on the screen>
 ![image](https://github.com/user-attachments/assets/b94737ef-63a1-4939-9370-be387b188165)
